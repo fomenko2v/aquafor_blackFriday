@@ -1,0 +1,60 @@
+/* Basics */
+body {
+    margin: 0 !important;
+    padding: 0;
+    background-color: #ffffff;
+    width:100% !important;
+}
+table {
+    border-spacing: 0;
+    mso-table-lspace:0pt;
+    mso-table-rspace:0pt;
+}
+td {
+    padding: 0;
+}
+img {
+    border: 0;
+    display: block;
+    -ms-interpolation-mode:bicubic;
+}
+div[style*="margin: 16px 0"] { 
+    margin:0 !important;
+}
+.wrapper {
+    width: 100%;
+    table-layout: fixed;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background-color: #ffffff;
+}
+.webkit {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.outer {
+Margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+}
+p {
+    mso-line-height: exactly;
+    Margin-top: 0;
+    Margin-left: 0;
+    Margin-right: 0;
+}
+/* Full image */
+.img600 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+.p1 {
+text-align: left;
+color: #202020;
+font-size: 16px;
+line-height: 28px;
+margin-bottom: 20px;
+font-weight: normal;
+}
