@@ -1,12 +1,23 @@
+$emailSmtpServer = "smtp.live.com"
+$emailSmtpServerPort = "587"
+$emailSmtpUser = "fomenko@live.ru"
+$emailSmtpPass = "popravkana110"
+ 
+$emailMessage = New-Object System.Net.Mail.MailMessage
+$emailMessage.From = "Василий Фоменко <fomenko@live.ru>"
+$emailMessage.To.Add( "fomenko.v.v@gmail.com" )
+$emailMessage.Subject = "Проверка e-mail"
+$emailMessage.IsBodyHtml = $true
+$emailMessage.Body = @"
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!--[if !mso]><!-->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!--<![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заголовок</title>
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Заголовок</title>
 <!--[if gte mso 9]>
 <xml>
 <o:officedocumentsettings><o:allowpng/><o:pixelsperinch>96</o:pixelsperinch></o:officedocumentsettings>
@@ -17,11 +28,11 @@
 </style>
 <style type="text/css">
 #outlook a{
-    padding:0;
+padding:0;
 }
 .ExternalClass Class Override
 .ExternalClass{
-    width:100%;
+width:100%;
 }
 .ExternalClass,
 .ExternalClass p,
@@ -29,9 +40,9 @@
 .ExternalClass font,
 .ExternalClass td,
 .ExternalClass div{
-    line-height: 100%;
+line-height: 100%;
 }
-a {text-decoration:none!important;}
+a {text-decoration:none;}
 </style>
 </head>
 <body style="margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-color:#ffffff;width:100% !important;" >
@@ -42,10 +53,10 @@ a {text-decoration:none!important;}
 <td style="border-bottom-style:solid;border-bottom-color:#000000;border-bottom-width:1px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing:0;mso-table-lspace:0pt;mso-table-rspace:0pt;" >
 <tr>
-    <td  width="150"  height="90" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="text-decoration:none!important;" ><img src="logo.png" alt="АКВАФОР" width="150" height="90" style="font-family:arial black, sanse-serif;font-weight:bold;font-size:24px;color:#154194;line-height:80px;border-width:0;display:block;-ms-interpolation-mode:bicubic;" /></a></td>
-    <td valign="middle" align="right" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><span class="tel" style="text-align:right;color:#000000;font-size:20px;font-family:'Arial';font-weight:bold;line-height:22px;" >8 812 320-65-06</span><br />
-   <span class="ras" style="text-align:right;font-size:12px;font-family:'Arial';color:rgb(170, 164, 174);line-height:14px;font-weight:normal;" >Ежедневно с 9:00 до 21:00</span>     
-    </td>
+<td  width="150"  height="90" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="text-decoration:none;" ><img src="logo.png" alt="АКВАФОР" width="150" height="90" style="font-family:arial black, sanse-serif;font-weight:bold;font-size:24px;color:#154194;line-height:80px;border-width:0;display:block;-ms-interpolation-mode:bicubic;" /></a></td>
+<td valign="middle" align="right" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><span class="tel" style="text-align:right;color:#000000;font-size:20px;font-family:'Arial';font-weight:bold;line-height:22px;" >8 812 320-65-06</span><br />
+<span class="ras" style="text-align:right;font-size:12px;font-family:'Arial';color:rgb(170, 164, 174);line-height:14px;font-weight:normal;" >Ежедневно с 9:00 до 21:00</span>     
+</td>
 </tr>
 </table>
 </td>
@@ -54,10 +65,10 @@ a {text-decoration:none!important;}
 <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-spacing:0;mso-table-lspace:0pt;mso-table-rspace:0pt;" >
 <tr>
-<td height="60" align="left" valign="middle" class="menu" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="font-size:12px;font-family:'Arial', sans-serif;color:#000000;text-transform:uppercase;line-height:2.333;text-decoration:none!important;" >Для питьевой воды</a></td>
-<td align="center" valign="middle" class="menu" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="font-size:12px;font-family:'Arial', sans-serif;color:#000000;text-transform:uppercase;line-height:2.333;text-decoration:none!important;" >Для ванной</a></td>
-<td align="center" valign="middle" class="menu" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="font-size:12px;font-family:'Arial', sans-serif;color:#000000;text-transform:uppercase;line-height:2.333;text-decoration:none!important;" >Сменные  модули</a></td>
-<td align="right" valign="middle" class="menu" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="font-size:12px;font-family:'Arial', sans-serif;color:#000000;text-transform:uppercase;line-height:2.333;text-decoration:none!important;" >% <b>АКЦИИ</b></a></td>
+<td height="60" align="left" valign="middle" class="menu" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="font-size:12px;font-family:'Arial', sans-serif;color:#000000;text-transform:uppercase;line-height:2.333;text-decoration:none;" >Для питьевой воды</a></td>
+<td align="center" valign="middle" class="menu" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="font-size:12px;font-family:'Arial', sans-serif;color:#000000;text-transform:uppercase;line-height:2.333;text-decoration:none;" >Для ванной</a></td>
+<td align="center" valign="middle" class="menu" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="font-size:12px;font-family:'Arial', sans-serif;color:#000000;text-transform:uppercase;line-height:2.333;text-decoration:none;" >Сменные  модули</a></td>
+<td align="right" valign="middle" class="menu" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="font-size:12px;font-family:'Arial', sans-serif;color:#000000;text-transform:uppercase;line-height:2.333;text-decoration:none;" >% <b>АКЦИИ</b></a></td>
 </tr>
 </table>
 </td>
@@ -88,8 +99,8 @@ a {text-decoration:none!important;}
 <center>
 <table cellpadding="0" cellspacing="0" border="0" width="390" align="center" style="border-spacing:0;mso-table-lspace:0pt;mso-table-rspace:0pt;" > 
 <tr>
-       <td class="but" align="center" valign="middle" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-color:#ffd200;border-radius:30px;height:60px;" ><a href="#" target="_blank" style="display:block;font-size:24px;line-height:60px;width:390;font-family:'Arial', sans-serif;color:#000000;font-weight:bold;text-decoration:none!important;" >Хочу ранний доступ!</a></td>
-   </tr>   
+<td class="but" align="center" valign="middle" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;background-color:#ffd200;border-radius:30px;height:60px;" ><a href="#" target="_blank" style="display:block;font-size:24px;line-height:60px;width:390;font-family:'Arial', sans-serif;color:#000000;font-weight:bold;text-decoration:none;" >Хочу ранний доступ!</a></td>
+</tr>   
 </table>   
 </center>
 </td></tr>
@@ -97,10 +108,10 @@ a {text-decoration:none!important;}
 </td>
 </tr>
 <tr>
-    <td bgcolor="#010303" valign="top" height="804" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><img src="img.jpg" alt="" class="img600" width="600" height="804" style="border-width:0;display:block;-ms-interpolation-mode:bicubic;width:100%;max-width:600px;height:auto;" /></td>
+<td bgcolor="#010303" valign="top" height="804" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><img src="img.jpg" alt="" class="img600" width="600" height="804" style="border-width:0;display:block;-ms-interpolation-mode:bicubic;width:100%;max-width:600px;height:auto;" /></td>
 </tr>
 <tr>
-    <td bgcolor="#f1f6fe" valign="top" style="border-bottom-style:solid;border-bottom-color:#000000;border-bottom-width:1px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+<td bgcolor="#f1f6fe" valign="top" style="border-bottom-style:solid;border-bottom-color:#000000;border-bottom-width:1px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
 <center>
 <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="border-spacing:0;mso-table-lspace:0pt;mso-table-rspace:0pt;" > 
 <tr>
@@ -119,23 +130,23 @@ a {text-decoration:none!important;}
 </tr>
 </table>
 </center>  
-    </td>
+</td>
 </tr>
 <tr>
-    <td bgcolor="#f1f6fe" valign="top" style="border-bottom-style:solid;border-bottom-color:#000000;border-bottom-width:1px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+<td bgcolor="#f1f6fe" valign="top" style="border-bottom-style:solid;border-bottom-color:#000000;border-bottom-width:1px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
 <center>
 <table cellpadding="0" cellspacing="0" border="0" width="540" align="center" style="border-spacing:0;mso-table-lspace:0pt;mso-table-rspace:0pt;" > 
 <tr>
 <td height="105" valign="middle" align="left" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><span class="tel2" style="text-align:right;color:#000000;font-size:20px;font-family:'Arial';font-weight:bold;line-height:22px;" >8 812 320-65-06</span><br />
 <span class="ras2" style="text-align:right;font-size:12px;font-family:'Arial';color:#000000;line-height:14px;font-weight:normal;" >Ежедневно с 9:00 до 21:00</span>     
 </td>
-<td width="50" valign="middle" align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="text-decoration:none!important;" ><img src="Vkontakte.png" alt="" width="40" height="40" style="border-width:0;display:block;-ms-interpolation-mode:bicubic;" /></a>
+<td width="50" valign="middle" align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="text-decoration:none;" ><img src="Vkontakte.png" alt="" width="40" height="40" style="border-width:0;display:block;-ms-interpolation-mode:bicubic;" /></a>
 </td>
-<td width="50" valign="middle" align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="text-decoration:none!important;" ><img src="Facebook.png" alt="" width="40" height="40" style="border-width:0;display:block;-ms-interpolation-mode:bicubic;" /></a>
+<td width="50" valign="middle" align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="text-decoration:none;" ><img src="Facebook.png" alt="" width="40" height="40" style="border-width:0;display:block;-ms-interpolation-mode:bicubic;" /></a>
 </td>
-<td width="50" valign="middle" align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="text-decoration:none!important;" ><img src="Instagram.png" alt="" width="40" height="40" style="border-width:0;display:block;-ms-interpolation-mode:bicubic;" /></a>
+<td width="50" valign="middle" align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="text-decoration:none;" ><img src="Instagram.png" alt="" width="40" height="40" style="border-width:0;display:block;-ms-interpolation-mode:bicubic;" /></a>
 </td>
-<td  width="45" valign="middle" align="right" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="text-decoration:none!important;" ><img src="Youtube.png" alt="" width="40" height="40" style="border-width:0;display:block;-ms-interpolation-mode:bicubic;" /></a>
+<td  width="45" valign="middle" align="right" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" ><a href="#" target="_blank" style="text-decoration:none;" ><img src="Youtube.png" alt="" width="40" height="40" style="border-width:0;display:block;-ms-interpolation-mode:bicubic;" /></a>
 </td>
 </tr>
 </table>
@@ -146,3 +157,10 @@ a {text-decoration:none!important;}
 </center>
 </body>
 </html>
+"@
+ 
+$SMTPClient = New-Object System.Net.Mail.SmtpClient( $emailSmtpServer , $emailSmtpServerPort )
+$SMTPClient.EnableSsl = $true
+$SMTPClient.Credentials = New-Object System.Net.NetworkCredential( $emailSmtpUser , $emailSmtpPass );
+ 
+$SMTPClient.Send( $emailMessage )
